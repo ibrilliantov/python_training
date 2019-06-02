@@ -23,11 +23,13 @@ class AddNewContact(unittest.TestCase):
         self.create_contact(wd, Contact (middlename="Iromman", firstname="Tony", lastname="Stark", nickname="ttt", title="WOW",
                                          company="StarkInc", address="www", home="rock", work="worldsaver", mobile="123",
                                          fax="123", email="one@home.com", email2="two@home.com", email3="three@home.com",
-                                         homepage="ewew", address2="leningrad", phone2="456", notes="what?"))
-        self.birthday(wd)
-        self.anniversary(wd)
-        wd.find_element_by_link_text("home page").click()
+                                         homepage="ewew", address2="leningrad", phone2="456", notes="what?", aday="5",
+                                         amonth="March", ayear="1987", bday="5", bmonth="March", byear="1987",))
+        self.return_home_page(wd)
         self.logout(wd)
+
+    def return_home_page(self, wd):
+        wd.find_element_by_link_text("home page").click()
 
     def logout(self, wd):
         wd.find_element_by_link_text("Logout").click()
@@ -85,29 +87,25 @@ class AddNewContact(unittest.TestCase):
         wd.find_element_by_name("notes").click()
         wd.find_element_by_name("notes").clear()
         wd.find_element_by_name("notes").send_keys(contact.notes)
-        # submit contact creation
-        wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
-
-    def anniversary(self, wd):
         # anniversary
         wd.find_element_by_name("aday").click()
-        Select(wd.find_element_by_name("aday")).select_by_visible_text("9")
+        Select(wd.find_element_by_name("aday")).select_by_visible_text(contact.aday)
         wd.find_element_by_name("amonth").click()
-        Select(wd.find_element_by_name("amonth")).select_by_visible_text("May")
+        Select(wd.find_element_by_name("amonth")).select_by_visible_text(contact.amonth)
         wd.find_element_by_name("theform").click()
         wd.find_element_by_name("ayear").click()
         wd.find_element_by_name("ayear").clear()
-        wd.find_element_by_name("ayear").send_keys("1988")
-
-    def birthday(self, wd):
+        wd.find_element_by_name("ayear").send_keys(contact.ayear)
         # birthday
         wd.find_element_by_name("bday").click()
-        Select(wd.find_element_by_name("bday")).select_by_visible_text("5")
+        Select(wd.find_element_by_name("bday")).select_by_visible_text(contact.bday)
         wd.find_element_by_name("bmonth").click()
-        Select(wd.find_element_by_name("bmonth")).select_by_visible_text("March")
+        Select(wd.find_element_by_name("bmonth")).select_by_visible_text(contact.bmonth)
         wd.find_element_by_name("byear").click()
         wd.find_element_by_name("byear").clear()
-        wd.find_element_by_name("byear").send_keys("1987")
+        wd.find_element_by_name("byear").send_keys(contact.byear)
+        # submit contact creation
+        wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
 
     def add_photo(self, wd, upload):
         wd.find_element_by_name("photo").click()
