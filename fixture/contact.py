@@ -142,26 +142,27 @@ class ContactHelper:
         wd.find_element_by_name("notes").click()
         wd.find_element_by_name("notes").clear()
         wd.find_element_by_name("notes").send_keys(contact.notes)
+
         # anniversary
 
-        # wd.find_element_by_name("aday").click()
-        # Select(wd.find_element_by_name("aday")).select_by_visible_text(contact.aday)
+        wd.find_element_by_name("aday").click()
+        Select(wd.find_element_by_name("aday")).select_by_visible_text(contact.aday)
         # wd.find_element_by_name("amonth").click()
         # Select(wd.find_element_by_name("amonth")).select_by_visible_text(contact.amonth)
         # wd.find_element_by_name("theform").click()
-        # wd.find_element_by_name("ayear").click()
-        # wd.find_element_by_name("ayear").clear()
-        # wd.find_element_by_name("ayear").send_keys(contact.ayear)
+        wd.find_element_by_name("ayear").click()
+        wd.find_element_by_name("ayear").clear()
+        wd.find_element_by_name("ayear").send_keys(contact.ayear)
 
         # birthday
 
-        # wd.find_element_by_name("bday").click()
-        # Select(wd.find_element_by_name("bday")).select_by_visible_text(contact.bday)
+        wd.find_element_by_name("bday").click()
+        Select(wd.find_element_by_name("bday")).select_by_visible_text(contact.bday)
         # wd.find_element_by_name("bmonth").click()
         # Select(wd.find_element_by_name("bmonth")).select_by_visible_text(contact.bmonth)
-        # wd.find_element_by_name("byear").click()
-        # wd.find_element_by_name("byear").clear()
-        # wd.find_element_by_name("byear").send_keys(contact.byear)
+        wd.find_element_by_name("byear").click()
+        wd.find_element_by_name("byear").clear()
+        wd.find_element_by_name("byear").send_keys(contact.byear)
 
         # submit contact creation
         wd.find_element_by_name("update").click()
