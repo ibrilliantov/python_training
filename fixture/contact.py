@@ -144,24 +144,24 @@ class ContactHelper:
         wd.find_element_by_name("notes").send_keys(contact.notes)
         # anniversary
 
-        wd.find_element_by_name("aday").click()
-        Select(wd.find_element_by_name("aday")).select_by_visible_text(contact.aday)
-        wd.find_element_by_name("amonth").click()
-        Select(wd.find_element_by_name("amonth")).select_by_visible_text(contact.amonth)
-        wd.find_element_by_name("theform").click()
-        wd.find_element_by_name("ayear").click()
-        wd.find_element_by_name("ayear").clear()
-        wd.find_element_by_name("ayear").send_keys(contact.ayear)
+        # wd.find_element_by_name("aday").click()
+        # Select(wd.find_element_by_name("aday")).select_by_visible_text(contact.aday)
+        # wd.find_element_by_name("amonth").click()
+        # Select(wd.find_element_by_name("amonth")).select_by_visible_text(contact.amonth)
+        # wd.find_element_by_name("theform").click()
+        # wd.find_element_by_name("ayear").click()
+        # wd.find_element_by_name("ayear").clear()
+        # wd.find_element_by_name("ayear").send_keys(contact.ayear)
 
         # birthday
 
-        wd.find_element_by_name("bday").click()
-        Select(wd.find_element_by_name("bday")).select_by_visible_text(contact.bday)
-        wd.find_element_by_name("bmonth").click()
-        Select(wd.find_element_by_name("bmonth")).select_by_visible_text(contact.bmonth)
-        wd.find_element_by_name("byear").click()
-        wd.find_element_by_name("byear").clear()
-        wd.find_element_by_name("byear").send_keys(contact.byear)
+        # wd.find_element_by_name("bday").click()
+        # Select(wd.find_element_by_name("bday")).select_by_visible_text(contact.bday)
+        # wd.find_element_by_name("bmonth").click()
+        # Select(wd.find_element_by_name("bmonth")).select_by_visible_text(contact.bmonth)
+        # wd.find_element_by_name("byear").click()
+        # wd.find_element_by_name("byear").clear()
+        # wd.find_element_by_name("byear").send_keys(contact.byear)
 
         # submit contact creation
         wd.find_element_by_name("update").click()
@@ -179,7 +179,7 @@ class ContactHelper:
 
     def open_edit_first_contact_page(self):
         wd = self.app.wd
-        wd.find_element_by_title("Edit").click()
+        wd.find_element_by_xpath('//*[@id="maintable"]/tbody/tr[2]/td[8]/a/img').click()
 
     def return_home_page(self):
         wd = self.app.wd
