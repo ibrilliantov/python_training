@@ -192,8 +192,8 @@ class ContactHelper:
         wd.find_element_by_name("selected[]").click()
         # submit deletion
         # wd.find_element_by_xpath("(.//*[normalize-space(text()) and normalize-space(.)='Select all'])[1]/following::input[2]").click()
-        wd.find_element_by_css("div.left:nth-child(8) > input:nth-child(1)").click()
+        # wd.find_element_by_css("div.left:nth-child(8) > input:nth-child(1)").click()
+        wd.find_element_by_xpath("/html/body/div/div[4]/form[2]/div[2]/input").click()
         # wd.find_element_by_name("delete").click()
         wd.switch_to.alert.accept()
         # self.return_home_page()
-
