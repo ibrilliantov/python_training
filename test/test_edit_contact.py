@@ -7,6 +7,8 @@ from model.contact import Contact
 
 
 def test_edit_first_contact(app):
+    if app.contact.count() == 0:
+        app.contact.create(Contact(middlename="Iromman", firstname="Tony", lastname="Stark", nickname="ttt", title="WOW" ))
     app.contact.edit_first_contact_page(Contact(middlename="EditIromman", firstname="EditTony", lastname="EditStark", nickname="Editttt", title="EditWOW",
                                company="EditStarkInc", address="www", home="rock", work="worldsaver", mobile="123",
                                fax="Edit123", email="Editone@home.com", email2="Edittwo@home.com", email3="Editthree@home.com",

@@ -94,3 +94,12 @@ class ContactHelper:
         # submit deletion
         wd.find_element_by_xpath("/html/body/div/div[4]/form[2]/div[2]/input").click()
         wd.switch_to.alert.accept()
+
+    def open_contact_home_page(self):
+        wd = self.app.wd
+        wd.get("http://localhost/addressbook/index.php")
+
+    def count(self):
+        wd = self.app.wd
+        self.open_contact_home_page()
+        return len(wd.find_elements_by_name("selected[]"))
