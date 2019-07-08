@@ -7,13 +7,15 @@ from model.contact import Contact
 
 
 def test_edit_first_contact(app):
+    old_contacts = app.contact.get_contact_list()
     if app.contact.count() == 0:
-        app.contact.create(Contact(middlename="Iromman", firstname="Tony", lastname="Stark", nickname="ttt", title="WOW" ))
-    app.contact.edit_first_contact_page(Contact(middlename="EditIromman", firstname="EditTony", lastname="EditStark", nickname="Editttt", title="EditWOW",
-                               company="EditStarkInc", address="www", home="rock", work="worldsaver", mobile="123",
-                               fax="Edit123", email="Editone@home.com", email2="Edittwo@home.com", email3="Editthree@home.com",
-                               homepage="Editewew", address2="Editleningrad", phone2="Edit456", notes="Editwhat?", aday="6",
-                               amonth="June", ayear="1988", bday="6", bmonth="June", byear="1988", ))
+        app.contact.create(
+            Contact(middlename="Iromman", firstname="Tony", lastname="Stark", nickname="ttt", title="WOW"))
+    contact = Contact(middlename="EditIromman")
+    contact.id = old_contacts[0].id
+    app.contact.edit_first_contact_page(contact)
+    new_contacts = app.contact.get_contact_list()
+    assert old_contacts == new_contacts
+    old_contacts[0] = contact
+    assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
 
-# def test_edit_first_amonth(app):
-#     app.contact.edit_first_contact_page(Contact(amonth="May"))
