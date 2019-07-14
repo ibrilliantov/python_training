@@ -65,15 +65,17 @@ class ContactHelper:
         self.fill_form_date("bday", contact.bday)
         self.fill_form_date("bmonth", contact.bmonth)
 
-    def edit_first_contact_page(self, contact):
+    def edit_contact_by_index(self, index, contact):
         wd = self.app.wd
-        self.open_edit_first_contact_page()
+        wd.find_elements_by_xpath("(//img[@alt='Edit'])")[index].click()
         self.fill_contact_fields(contact)
-        # submit contact creation
         wd.find_element_by_name("update").click()
         self.return_home_page()
         self.contact_cache = None
 
+    def edit_first_contact_page(self):
+        wd = self.app.wd
+        self.edit_contact_by_index(0)
 
     def add_photo(self, upload):
         wd = self.app.wd
@@ -93,16 +95,26 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_element_by_link_text("home page").click()
 
-    def delete_first_contact(self):
+    def select_contact_by_index(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_name("selected[]")[index].click()
+
+
+    def delete_contact_by_index(self, index):
         wd = self.app.wd
         # select first contact checkbox
-        wd.find_element_by_name("selected[]").click()
+        self.select_contact_by_index(index)
+        # wd.find_element_by_name("selected[]").click()
         # submit deletion
         wd.find_element_by_xpath("/html/body/div/div[4]/form[2]/div[2]/input").click()
         wd.switch_to.alert.accept()
         wd.find_element_by_css_selector("div.msgbox")
         self.open_contact_home_page()
         self.contact_cache = None
+
+    def delete_first_contact(self):
+        wd = self.app.wd
+        self.delete_contact_by_index(0)
 
     def open_contact_home_page(self):
         wd = self.app.wd

@@ -44,23 +44,33 @@ class GroupHelper:
         wd = self.app.wd
         wd.get("http://localhost/addressbook/group.php")
 
-    def delete_first_group(self):
+    def select_group_by_index(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_name("selected[]")[index].click()
+
+
+    def delete_group_by_index(self, index):
         wd = self.app.wd
         self.open_group_page()
-        self.select_first_group()
+        self.select_group_by_index(index)
         #submit deletion
         wd.find_element_by_name("delete").click()
         self.return_groups_page()
         self.group_cache = None
 
+    def delete_first_group(self):
+        wd = self.app.wd
+        self.delete_group_by_index(0)
+
+
     def select_first_group(self):
         wd = self.app.wd
         wd.find_element_by_name("selected[]").click()
 
-    def edit_first_group(self, new_group_data):
+    def edit_group_by_index(self, index, new_group_data):
         wd = self.app.wd
         self.open_group_page()
-        self.select_first_group()
+        self.select_group_by_index(index)
         #submit edit button
         wd.find_element_by_name("edit").click()
         #edit group
@@ -70,6 +80,9 @@ class GroupHelper:
         self.return_groups_page()
         self.group_cache = None
 
+    def edit_first_group(self):
+        wd = self.app.wd
+        self.edit_group_by_index(0)
 
     def count(self):
         wd = self.app.wd
@@ -88,3 +101,5 @@ class GroupHelper:
                 id = element.find_element_by_name("selected[]").get_attribute("value")
                 self.group_cache.append(Group(name=text, id=id))
         return list(self.group_cache)
+
+
