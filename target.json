@@ -1,5 +1,14 @@
 {
-  "baseURL": "http://localhost/addressbook/index.php",
-  "username": "admin",
-  "password": "secret"
+  "web": {
+    "baseURL": "http://localhost/addressbook/index.php",
+    "username": "admin",
+    "password": "secret"
+  },
+  "db": {
+    "host": "localhost",
+    "name": "addressbook",
+    "user": "root",
+    "password": ""
+  }
 }
+
