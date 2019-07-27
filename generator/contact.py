@@ -28,7 +28,7 @@ def random_string(prefix, maxlen):
 
 
 testdata = [Contact(middlename="", firstname="", lastname="")] + [
-    Contact(middlename=random_string("name", 10), firstname=random_string("header", 20), lastname=random_string("footer", 20))
+    Contact(middlename=random_string("middlename", 10), firstname=random_string("firstname", 20), lastname=random_string("lastname", 20))
     for i in range(n)
 ]
 
