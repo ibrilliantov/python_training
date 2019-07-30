@@ -105,6 +105,25 @@ class ContactHelper:
         self.open_contact_home_page()
         self.contact_cache = None
 
+
+    def delete_contact_by_id(self, id):
+        wd = self.app.wd
+        # select first contact checkbox
+        self.select_contact_by_id(id)
+        # wd.find_element_by_name("selected[]").click()
+        # submit deletion
+        wd.find_element_by_xpath("/html/body/div/div[4]/form[2]/div[2]/input").click()
+        wd.switch_to.alert.accept()
+        wd.find_element_by_css_selector("div.msgbox")
+        self.open_contact_home_page()
+        self.contact_cache = None
+
+
+    def select_contact_by_id(self, id):
+        wd = self.app.wd
+        wd.find_element_by_css_selector("input[value='%s']" % id).click()
+
+
     def delete_first_contact(self):
         wd = self.app.wd
         self.delete_contact_by_index(0)
@@ -149,10 +168,25 @@ class ContactHelper:
         self.return_home_page()
         self.contact_cache = None
 
+    def edit_contact_by_id(self, id, contact):
+        wd = self.app.wd
+        self.open_contact_to_edit_by_id(id)
+        self.fill_contact_fields(contact)
+        wd.find_element_by_xpath("(//input[@name='update'])[2]").click()
+        self.app.open_home_page()
+        self.contact_cache = None
+
     def open_contact_to_edit_by_index(self, index):
         wd = self.app.wd
         self.app.open_home_page()
         row = wd.find_elements_by_name("entry")[index]
+        cell = row.find_elements_by_tag_name("td")[7]
+        cell.find_element_by_tag_name("a").click()
+
+    def open_contact_to_edit_by_id(self, id):
+        wd = self.app.wd
+        self.app.open_home_page()
+        row = wd.find_element_by_xpath("//tr[@name='entry']/td/input[@value='%s']/../.." % id)
         cell = row.find_elements_by_tag_name("td")[7]
         cell.find_element_by_tag_name("a").click()
 
