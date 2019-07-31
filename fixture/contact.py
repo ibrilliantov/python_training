@@ -152,9 +152,10 @@ class ContactHelper:
                 id = cells[0].find_element_by_name("selected[]").get_attribute("value")
                 lastname = cells[1].text
                 firstname = cells[2].text
+                address = cells[3].text
                 all_phones = cells[5].text
                 all_emails = cells[4].text
-                self.contact_cache.append(Contact(id=id, firstname=firstname, lastname=lastname,
+                self.contact_cache.append(Contact(id=id, firstname=firstname, lastname=lastname, address=address,
                                                   all_phones_from_homepage=all_phones,
                                                   all_emails_from_homepage=all_emails))
         return list(self.contact_cache)
