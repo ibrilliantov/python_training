@@ -50,6 +50,30 @@ class DBfixture:
             cursor.close()
         return list
 
+    def get_group_list_with_contacts(self):
+        list = []
+        cursor = self.connection.cursor()
+        try:
+            cursor.execute("SELECT DISTINCT group_id FROM address_in_groups")
+            for row in cursor:
+                (id,) = row
+                list.append(str(id))
+        finally:
+            cursor.close()
+        return list
+
+    def get_contact_in_group_page(self):
+        list = []
+        cursor = self.connection.cursor()
+        try:
+            cursor.execute("SELECT DISTINCT group_id FROM address_in_groups")
+            for row in cursor:
+                (id) = row
+                list.append(str(id))
+        finally:
+            cursor.close()
+        return list
+
     def get_contact_id(self, id_in):
         cursor = self.connection.cursor()
         try:

@@ -230,3 +230,25 @@ class ContactHelper:
         return Contact(homephone=homephone, mobilephone=mobilephone,
                        workphone=workphone, secondaryphone=secondaryphone)
 
+    def add_contact_to_group(self, id_contact, id_group):
+        wd = self.app.wd
+        self.app.open_home_page()
+        self.select_contact_by_id(id_contact)
+        wd.implicitly_wait(10)
+        wd.find_element_by_name("to_group").click()
+        Select(wd.find_element_by_name("to_group")).select_by_value(id_group)
+        wd.find_element_by_name("add").click()
+        self.open_group_page_with_contacts(id)
+        self.open_group_page_with_contacts(id_group)
+
+    def delete_contact_in_group(self, id_group, id_contact):
+        wd = self.app.wd
+        self.open_group_page_with_contacts(id_group)
+        self.select_contact_by_id(id_contact)
+        wd.find_element_by_name("remove").click()
+
+    def open_group_page_with_contacts(self, id):
+        wd = self.app.wd
+        if not (wd.current_url == "http://localhost/addressbook/?group=%s" % id
+                and len(wd.find_element_by_name("remove")) > 0):
+            wd.get("http://localhost/addressbook/?group=%s" % id)
