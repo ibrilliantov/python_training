@@ -1,0 +1,81 @@
+remote_connection.py       388 DEBUG    GET http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/url {}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "GET /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/url HTTP/1.1" 200 50
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element {"using": "link text", "value": "groups"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element HTTP/1.1" 200 88
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/310e6d7c-27e4-434b-b75b-4ec7cc280cb8/click {"id": "310e6d7c-27e4-434b-b75b-4ec7cc280cb8"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/310e6d7c-27e4-434b-b75b-4ec7cc280cb8/click HTTP/1.1" 200 14
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element {"using": "css selector", "value": "[name=\"new\"]"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element HTTP/1.1" 200 88
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/a2d772d2-9245-414f-8be2-949b0bcb904a/click {"id": "a2d772d2-9245-414f-8be2-949b0bcb904a"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/a2d772d2-9245-414f-8be2-949b0bcb904a/click HTTP/1.1" 200 14
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element {"using": "css selector", "value": "[name=\"group_name\"]"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element HTTP/1.1" 200 88
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/16fc4aa8-2951-3945-98b7-0687d2e5b2be/click {"id": "16fc4aa8-2951-3945-98b7-0687d2e5b2be"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/16fc4aa8-2951-3945-98b7-0687d2e5b2be/click HTTP/1.1" 200 14
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element {"using": "css selector", "value": "[name=\"group_name\"]"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element HTTP/1.1" 200 88
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/16fc4aa8-2951-3945-98b7-0687d2e5b2be/clear {"id": "16fc4aa8-2951-3945-98b7-0687d2e5b2be"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/16fc4aa8-2951-3945-98b7-0687d2e5b2be/clear HTTP/1.1" 200 14
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element {"using": "css selector", "value": "[name=\"group_name\"]"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element HTTP/1.1" 200 88
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/16fc4aa8-2951-3945-98b7-0687d2e5b2be/value {"text": "", "value": [], "id": "16fc4aa8-2951-3945-98b7-0687d2e5b2be"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/16fc4aa8-2951-3945-98b7-0687d2e5b2be/value HTTP/1.1" 200 14
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element {"using": "css selector", "value": "[name=\"group_header\"]"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element HTTP/1.1" 200 88
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/df34c796-a84f-3d4d-bcf1-0702adf01d6d/click {"id": "df34c796-a84f-3d4d-bcf1-0702adf01d6d"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/df34c796-a84f-3d4d-bcf1-0702adf01d6d/click HTTP/1.1" 200 14
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element {"using": "css selector", "value": "[name=\"group_header\"]"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element HTTP/1.1" 200 88
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/df34c796-a84f-3d4d-bcf1-0702adf01d6d/clear {"id": "df34c796-a84f-3d4d-bcf1-0702adf01d6d"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/df34c796-a84f-3d4d-bcf1-0702adf01d6d/clear HTTP/1.1" 200 14
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element {"using": "css selector", "value": "[name=\"group_header\"]"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element HTTP/1.1" 200 88
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/df34c796-a84f-3d4d-bcf1-0702adf01d6d/value {"text": "", "value": [], "id": "df34c796-a84f-3d4d-bcf1-0702adf01d6d"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/df34c796-a84f-3d4d-bcf1-0702adf01d6d/value HTTP/1.1" 200 14
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element {"using": "css selector", "value": "[name=\"group_footer\"]"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element HTTP/1.1" 200 88
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/cfe84a8f-60af-294c-ab8a-956e8441243e/click {"id": "cfe84a8f-60af-294c-ab8a-956e8441243e"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/cfe84a8f-60af-294c-ab8a-956e8441243e/click HTTP/1.1" 200 14
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element {"using": "css selector", "value": "[name=\"group_footer\"]"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element HTTP/1.1" 200 88
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/cfe84a8f-60af-294c-ab8a-956e8441243e/clear {"id": "cfe84a8f-60af-294c-ab8a-956e8441243e"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/cfe84a8f-60af-294c-ab8a-956e8441243e/clear HTTP/1.1" 200 14
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element {"using": "css selector", "value": "[name=\"group_footer\"]"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element HTTP/1.1" 200 88
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/cfe84a8f-60af-294c-ab8a-956e8441243e/value {"text": "", "value": [], "id": "cfe84a8f-60af-294c-ab8a-956e8441243e"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/cfe84a8f-60af-294c-ab8a-956e8441243e/value HTTP/1.1" 200 14
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element {"using": "css selector", "value": "[name=\"submit\"]"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element HTTP/1.1" 200 88
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/ee95f4fc-7cee-9340-852b-62ac5e6a8dc0/click {"id": "ee95f4fc-7cee-9340-852b-62ac5e6a8dc0"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/ee95f4fc-7cee-9340-852b-62ac5e6a8dc0/click HTTP/1.1" 200 14
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element {"using": "link text", "value": "group page"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element HTTP/1.1" 200 88
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/e43e397b-0167-024e-9efc-96ecb34da62c/click {"id": "e43e397b-0167-024e-9efc-96ecb34da62c"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/e43e397b-0167-024e-9efc-96ecb34da62c/click HTTP/1.1" 200 14
+remote_connection.py       440 DEBUG    Finished Request

@@ -1,0 +1,12 @@
+remote_connection.py       388 DEBUG    GET http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/url {}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "GET /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/url HTTP/1.1" 200 50
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/elements {"using": "link text", "value": "Logout"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/elements HTTP/1.1" 200 90
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    POST http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element {"using": "xpath", "value": "//div/div[1]/form/b"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "POST /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element HTTP/1.1" 200 88
+remote_connection.py       440 DEBUG    Finished Request
+remote_connection.py       388 DEBUG    GET http://127.0.0.1:54225/session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/9dbac20b-b938-8d48-9374-aaa3d4eb47bd/text {"id": "9dbac20b-b938-8d48-9374-aaa3d4eb47bd"}
+connectionpool.py          396 DEBUG    http://127.0.0.1:54225 "GET /session/8e208777-f3a6-b840-bc2b-f58c961d57e4/element/9dbac20b-b938-8d48-9374-aaa3d4eb47bd/text HTTP/1.1" 200 19
+remote_connection.py       440 DEBUG    Finished Request
