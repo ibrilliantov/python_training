@@ -1,16 +1,20 @@
 # -*- coding: utf-8 -*-
 from model.group import Group
 import random
+import pytest
 
 
 def test_delete_some_group(app, db, check_ui):
     if len (db.get_group_list()) == 0:
         app.group.create(Group(name="test", header="gsdsgfsgf", footer="footer"))
     old_groups = db.get_group_list()
-    group = random.choice(old_groups)
-    app.group.delete_group_by_id(group.id)
+    with pytest.allure.step('Choice group for delete'):
+        group = random.choice(old_groups)
+    with pytest.allure.step('Delete random group'):
+        app.group.delete_group_by_id(group.id)
     new_groups = db.get_group_list()
-    assert len(old_groups) - 1 == len(new_groups)
+    with pytest.allure.step('Check group is delete'):
+        assert len(old_groups) - 1 == len(new_groups)
     old_groups.remove(group)
     assert old_groups == new_groups
     if check_ui:
