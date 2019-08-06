@@ -11,7 +11,7 @@ Scenario Outline: Add new group
 
 
 Scenario: Delete a group
-  Given a group list
+  Given a non-empty group list
   Given a random group from the list
   When I delete the group from the list
   Then the new list is equal to the old list without he deleted group
